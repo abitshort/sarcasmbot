@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 let botUserID;
 const switchInsult = 75
-const fuckWithAaronThreshold = 75
+const fuckWithAaronThreshold = 95
 
 
 client.on('ready', () => {
@@ -44,7 +44,7 @@ client.on('message', msg => {
         }
 
         if (msg.author.username.includes("rigidcherry")) {
-           msg.channel.send(fuckWithAaron(fuckWithAaronThreshold));
+           fuckWithAaron(msg);
         }
 
 });
@@ -68,7 +68,7 @@ function fuckWithAaron(triggerChance) {
     let x = Math.floor(Math.random() * 100);
     let y = Math.floor(Math.getRandomInt(opts.length - 1));
     if (x > triggerChance){
-        return opts[y];
+        msg.channel.send(opts[y]);
     }
 }
 
