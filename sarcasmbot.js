@@ -66,7 +66,7 @@ function getFuckedAddressee( username ){
 function fuckWithAaron(triggerChance) {
     let opts = ["I bet that's some bullshit you just made up","Hold on, I have something for you. *farts*","damnit aaron","I liked it better when you drank more.","That's dumb.","I'm bored","BUT WHY","I don't think I will, thanks.","http://2.bp.blogspot.com/-9yvIzbo17no/UQ4-SOZrVZI/AAAAAAAAI5o/bHVVhuAfc5U/s1600/michael-scott-disgusted.gif","Ah fuck, I can't believe you've done this.","No. Bad Aaron."]
     let x = Math.floor(Math.random() * 100);
-    let y = Math.floor(Math.random() * 10 * opts.length);
+    let y = Math.floor(Math.getRandomInt(opts.length));
     if (x > triggerChance){
         return opts[y];
     }
